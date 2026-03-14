@@ -37,6 +37,7 @@
             this.tbGenKey = new System.Windows.Forms.TextBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbIn
@@ -49,9 +50,9 @@
             // 
             // tbKey
             // 
-            this.tbKey.Location = new System.Drawing.Point(12, 40);
+            this.tbKey.Location = new System.Drawing.Point(62, 40);
             this.tbKey.Name = "tbKey";
-            this.tbKey.Size = new System.Drawing.Size(600, 22);
+            this.tbKey.Size = new System.Drawing.Size(550, 22);
             this.tbKey.TabIndex = 1;
             // 
             // tbOut
@@ -107,12 +108,22 @@
             // 
             this.openFileDialog.Title = "Открыть...";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Ключ:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(800, 132);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tbGenKey);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCipher);
@@ -139,6 +150,7 @@
         private System.Windows.Forms.TextBox tbGenKey;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.Label label1;
     }
 }
 

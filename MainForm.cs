@@ -9,9 +9,10 @@ namespace Lab2
     {
         byte[] input = new byte[8];
         byte[] output = new byte[8];
+        byte[] genKey = new byte[8];
+        int genKeySize;
         int count;
-        UInt64 key;
-        UInt64 genKey;               
+        UInt64 key;            
         public MainForm()
         {
             InitializeComponent();
@@ -39,13 +40,13 @@ namespace Lab2
                 {
                     try
                     {
-                        genKey = StreamCipher.Cipher(key, openFileDialog.FileName, saveFileDialog.FileName, output);
+                        genKeySize = StreamCipher.Cipher(key, openFileDialog.FileName, saveFileDialog.FileName, genKey, output);
                     }
                     catch (IOException ex)
                     {
                         MessageBox.Show(ex.Message);
                     }
-                    tbGenKey.Text = Utils.ToByteString(genKey);
+                    tbGenKey.Text = Utils.ToByteString(genKey, genKeySize);
                     tbOut.Text = Utils.ToByteString(output, count);
                 }
             }
