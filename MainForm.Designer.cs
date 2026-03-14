@@ -131,6 +131,8 @@
             this.Controls.Add(this.tbOut);
             this.Controls.Add(this.tbKey);
             this.Controls.Add(this.tbIn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Stream cipher";
             this.Load += new System.EventHandler(this.MainForm_Load);
